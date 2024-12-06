@@ -1,15 +1,18 @@
-name: ci
-run-name: Test-CI
+name: workflow-docker-build
+run-name: workflow-docker-build
 on: [push]
 jobs:
-  hello-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hello
-        run: echo "Hello, world!"
+  # hello-job:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Hello
+  #       run: echo "Hello, world!"
   build-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Build
         run: bash ./.bash/automate.bash
   # triger-job:
