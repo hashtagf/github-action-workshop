@@ -7,3 +7,13 @@ jobs:
     steps:
       - name: Hello
         run: echo "Hello, world!"
+  build-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: bash .bash/automate.bash
+  # triger-job:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Trigger
+  #       run: bash .bash/trigger.bash

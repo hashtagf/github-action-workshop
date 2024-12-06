@@ -1,9 +1,10 @@
-
-use std::env;
 use dotenv::dotenv;
+use std::env;
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     dotenv().ok(); // Load environment variables from .env file
+
+    println!("Starting server...");
     HttpServer::new(|| {
         App::new()
             .service(hello)
@@ -41,4 +42,3 @@ async fn dev() -> impl Responder {
 async fn manual_hello() -> impl Responder {
     HttpResponse::Ok().body("Hey there!")
 }
-
