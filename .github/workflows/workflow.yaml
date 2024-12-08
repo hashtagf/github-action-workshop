@@ -8,10 +8,10 @@ jobs:
   #     - name: Hello
   #       run: echo "Hello, world!"
   build-job:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build
         run: bash ./.bash/automate.bash
