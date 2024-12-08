@@ -31,3 +31,9 @@ docker ps -a
 ```
 
 # Next step
+
+## Github token
+
+### GIT PAT TOKEN
+
+- set personal accesstoken in github action secret

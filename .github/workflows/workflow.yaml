@@ -15,8 +15,6 @@ jobs:
 
       - name: Build
         run: bash ./.bash/automate.bash
-  # triger-job:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Trigger
-  #       run: bash .bash/trigger.bash
+
+      - name: Trigger to k8s-workshop
+        run: bash .bash/trigger.bash ${{ secrets.GIT_PAT }}
